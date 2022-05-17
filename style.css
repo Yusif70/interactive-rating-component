@@ -1,0 +1,125 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+} 
+
+body, h2, p{
+  margin: 0;
+}
+h2{
+    font-weight: 700;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+    line-height: 1.5;
+    background-color: hsl(216, 12%, 8%);
+    color: white;
+    display:grid;
+    place-items: center;
+    font-size: 15px;
+}
+img{
+   max-width: 100%;
+   display: block;
+   background-color: hsl(216, 12%, 54%);
+   border-radius: 1rem;
+   padding: 5px;
+}
+
+button{
+    background-color: transparent;
+    border: transparent;
+}
+.box-container{
+    max-width: 17rem;
+    background-color: hsl(213, 19%, 18%);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+.img-container, .rating-btn{
+    width: 2rem;
+    aspect-ratio: 1;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+}
+.box-container p{
+    color: white;
+
+}
+
+.rating-btn-container{
+    max-width: 100%;
+    display:flex;
+    justify-content: space-between;
+
+}    
+.rating-btn{
+    border-radius: 1.6rem;
+    width: 2.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.rating-btn:hover{
+    background-color: hsl(216, 12%, 54%);
+    font-weight: 700;
+}
+.rating-btn[aria-selected="true"]{
+   background-color: orange;
+   font-weight: 800;
+}
+
+.submit-btn{
+    width: 100%;
+    border-radius: 1.7rem;
+    background-color: orange;
+    padding-block: 0.4rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.submit-btn:hover{
+    color: orange;
+    background-color: white;
+    font-weight: 800;
+
+}
+
+.thank-you-container{
+    padding-inline: 2.5em;
+    text-align: center;
+
+}
+.thank-you-container img{
+    margin-inline: auto;
+    max-width: 50%;
+}
+.thank-you-container p{
+    font: 0.5rem;
+}
+.rating-result{
+    background-color: hsl(216, 12%, 8%);
+    color: orange;
+    max-width: 50%;
+    padding-block: 0.2em;
+    margin-inline: auto;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width: 280px) {
+       .box-container{
+           max-width: 15rem;
+           margin-inline: auto;
+       }
+       .rating-result{
+           max-width: 50%;
+       }
+}
